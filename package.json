@@ -1,0 +1,19 @@
+{
+  "name": "url-shortner-express",
+  "version": "1.0.0",
+  "description": "A command-line interface (CLI) project that allows users to shorten URLs using a simple Express server. The application provides a fast and easy way to create short links for long URLs.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}

@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "fira code", monospace,
+		sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	place-content: center;
+}
+
+.container {
+	width: 35%;
+	height: auto;
+	border: 2px solid black;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	overflow: scroll;
+	scrollbar-width: none;
+	margin:  auto;
+}
+
+.container .short-urls {
+	width: 85%;
+	border: 1px solid black;
+    padding: 1rem;
+
+	& ul li {
+		display: block; /* Make the <a> block-level so it takes up the full width of the container */
+		word-wrap: break-word; /* Break long words to prevent overflow */
+		overflow-wrap: break-word; /* Same as word-wrap, but more modern */
+		word-break: break-all; /* Force long words or URLs to break across lines if necessary */
+		white-space: normal; /* Allow the text to wrap normally */
+		max-width: 100%; /* Ensure the <a> doesn't overflow the parent container */
+		text-decoration: none;
+	}
+	& ul {
+		padding: 0; /* Remove default padding */
+		list-style-type: none; /* Remove bullets */
+		margin: 0; /* Remove default margin */
+	}
+}
+
+h2,
+input,
+label,
+button {
+	margin: 0.5rem auto;
+}
+
+label {
+	display: block;
+}
+
+h2 {
+	text-decoration: underline;
+}
+
+.report-section {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Url Shortner</title>
+		<link
+			rel="stylesheet"
+			href="styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h2>URL SHORTNER</h2>
+			<form
+				action="/"
+				method="post">
+				<div>
+					<label for="url">Enter URL</label>
+					<input
+						type="url"
+						name="url"
+						id="url"
+						required />
+				</div>
+				<div>
+					<label for="shorturl">Enter SHORT-URL</label>
+					<input
+						type="text"
+						name="shorturl"
+						id="shorturl"
+						required />
+				</div>
+				<button type="submit">Get URL</button>
+			</form>
+
+			<h2>SHORT URL'S</h2>
+			<div class="short-urls">
+				<ul>
+					<!-- Object.entries(links) .map( ([shorturl, url]) => `
+					<li>
+						<a
+							href="/${shorturl}"
+							target="_blank"
+							>${host}/${shorturl}</a
+						>
+						- ${url}
+					</li>
+					` ) .join(""); -->
+
+					<% Object.entries(links).map(([shorturl, url]) => {%> <% const
+					truncatedUrl = url.length >= 30 ? `${url.slice(0, 30)}...`: url %>
+					<li>
+						<a
+							href="/<%= shorturl %>"
+							target="_blank">
+							<%= host %>/<%= shorturl %>
+						</a>
+						- <%= url %>
+					</li>
+					<% }) %>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
